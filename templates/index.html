@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.StarrLight.com</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="main-content">
+        <header class="header">
+            <div class="left">
+                <img src="{%static 'or.png' %}" alt="">
+            </div>
+            <div class="mid">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>
+                            <a href="/about">About us</a>
+                           
+                        </li>
+                        <li>
+                            <a href="/projects">Projects</a>
+                            
+                        </li>
+                        <li><a href="/contact">Contact Info</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section id="home">
+            <h1 class="h-primary">Welcome to our StarLight Home..!</h1>
+            <p>Where every child finds family,let's empowering children one at a time.</p>
+            <a href="/donate" class="btn">Donate Now.!</a>
+        </section>
+    </div>
+    <section class="about-container">
+        <h1 class="hh-primary-center">Our Organization</h1>
+        <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem suscipit, consequatur nulla nemo iure unde
+                facere labore? Quam ducimus laudantium delectus? Corrupti repudiandae ratione beatae a odit facilis
+                dignissimos voluptates ad maxime alias nihil natus, nisi possimus est dolorem ipsa omnis mollitia molestiae.
+                Corrupti porro, vel reiciendis rem suscipit tenetur nulla maxime quo soluta iusto, autem amet fugiat sed
+                atque, corporis delectus! Vitae exercitationem unde quibusdam magni corporis laudantium, quisquam eum
+                necessitatibus voluptates est. Sed iure voluptas veritatis quidem esse? Pariatur nemo ad ipsa reprehenderit.
+                Minima nulla maiores architecto consectetur voluptate sed dolorem eaque quo delectus tenetur, consequuntur
+                velit explicabo modi quisquam veritatis nostrum, inventore numquam? Sequi doloremque mollitia eius
+                repellendus deleniti quas facere sapiente? Omnis quaerat veritatis impedit exercitationem voluptatum?
+                Repellat distinctio natus aliquam adipisci, labore cum reprehenderit maxime beatae porro magnam minima
+                optio, dolorum mollitia.</b></p>
+        <div id="container">
+            <div class="box">
+                <img src="{% static 'box1.png' %}" alt="">
+                <h2 class="center">Our children</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis dolores optio modi earum sed voluptas
+                    praesentium voluptatem</p>
+            </div>
+    
+            <div class="box">
+                <img src="{% static 'box2.png' %}" alt="">
+                <h2 class="center">Our School</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis dolores optio modi earum sed voluptas
+                    praesentium voluptatem</p>
+            </div>
+    
+            <div class="box">
+                <img src="{% static 'box3.png' %}" alt="">
+                <h2 class="center">Our Family</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis dolores optio modi earum sed voluptas
+                    praesentium voluptatem.</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container2">
+        <div class="text">
+            <h2>Introduction Video</h2>
+            <p>For more than 70 years, with the help of caring individuals worldwide and a lot of hard work, we wake up each
+                day with the same goal: to bring as much love to as many children as possible. It’s not always easy, it
+                comes with a long list of challenges to overcome… but we are doing it! Lives are being changed and stories
+                rewritten. We are excited to
+                have you along for the ride. Take a look at our introduction video for a quick
+                rundown on who we are.</p>
+            <button class="btn">Learn More</button>
+        </div>
+        <div class="video">
+            <iframe width="560" height="1600"
+                src="https://www.youtube.com/embed/nmZMddlKrFo?pp=ygUWIG9ycGhhbmFnZSBpbnRybyB2aWRlbw%3D%3D" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="text2">
+            <!-- <h2>Summer Games</h2> -->
+            <h2>Summer Games</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ullam earum, quod, repudiandae veniam numquam
+                neque alias adipisci, sapiente esse eius minus! Dolore aliquid voluptatem omnis nesciunt similique, ipsam
+                rerum commodi qui! Ipsum, aut in repellat magnam obcaecati distinctio minima aliquid deserunt assumenda
+                harum sit quod tempora ullam cum non, iste vero nostrum odit sunt ex ducimus. Officia natus accusamus sint
+                atque obcaecati animi maxime possimus sequi consequatur pariatur quis quae quibusdam hic assumenda vel non
+                dolores, ea porro beatae voluptatibus corporis, voluptate nostrum quam laboriosam! Nulla, cupiditate unde
+                odio tempora autem pariatur eveniet esse quod sequi nam earum molestias dolore at molestiae aut
+                reprehenderit. Quisquam numquam sunt delectus, debitis corporis expedita iste odit assumenda quae
+                consectetur, ab distinctio recusandae.</p>
+            <button class="btn">Learn More</button>
+        </div>
+        <div class="image">
+            <img src="{% static 'summer.png' %}" alt="">
+        </div>
+    </div>
+    <div class="container">
+        <h1>Our Projects and programs</h1>
+        <div class="right-side">
+            <img src="{% static 'waterdrop.png' %}" alt="image">
+            <h1>5,500 Water Filters Distributed to Schools and Communities.</h1>
+            <p>Helping remove viruses and bacteria from water which are what cause most water-borne diseases.</p>
+        </div>
+        <div class="bottom-content">
+            <div class="right-side">
+                <img src="{% static 'well.png' %}" alt="Image">
+                <h2>10 Improved Water Wells Installed</h2>
+                <p>Reducing the devastating effect on health, dignity by providing access to safe, sufficient, and affordable water, sanitation, and hygiene facilities.</p>
+            </div>
+            <div class="bottom-box">
+                    <img src="{% static 'bicycle.png' %}" alt="">
+                    <h2>300 Bikes Donated to Orphan Children</h2>
+                    <p>Serve as a necessary means of transportation to school, but also as a symbol of hope for new
+                        opportunities and possibilities for the orphans.</p>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <div class="right-side">
+                <img src="{% static 'smart.png' %}" alt="Image">
+                <h2>1 Smart Room (Equipped with Computers) installed for Orphan Children</h2>
+                <p>Contribute to the improvement of student learning and basic skill area</p>
+            </div>
+            <div class="right-side">
+                <img src="{% static 'supplies.png' %}" alt="Image">
+                <h2>Over $35, 255 of School Supplies gifted</h2>
+                <p>Help improve grades, creativity, attitudes towards learning, behavior, peer relationships and self-image.</p>
+            </div>
+            <div class="bottom-content">
+                <div class="right-side">
+                    <img src="{% static 'blanket.png' %}" alt="Image">
+                    <h2>1100 Blankets Provided to Children in Need</h2>
+                    <p>Provide comfort and well-being, ensure each orphan's health by keeping them warm with soft and fluffy blankets</p>
+                </div>
+                <div class="right-side">
+                    <img src="{% static 'clothes.png' %}" alt="Image">
+                    <h2>Over $25,700 worth of Clothes Issued to Children</h2>
+                    <p>Offer not only protection from the elements but also a boost in self-esteem and dignity.</p>
+                </div>
+                <div class="right-side">
+                    <img src="{% static 'census.png' %}" alt="image">
+                    <h1>10 Census of Orphan Children Conducted.</h1>
+                    <p>Provide periodic and comprehensive statistics about the nation.</p>
+                </div>
+    </div>
+    </div>
+    </div>
+    <div class="container5">
+        <div class="form-container">
+            <h2>Sign Up</h2>
+            <form action="">
+                <input type="text" name="email" placeholder="Enter your email">
+                <input type="password" name="password" placeholder="Enter your password">
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="center">
+            Copyright &copy; www.StarLight.com All rights reserverd
+        </div>
+    </footer>
+</body>
+
+</html>

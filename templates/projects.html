@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div id="main-content">
+        <header class="header">
+            <div class="left">
+                <img src="{% static 'or.png'%}" alt="">
+            </div>
+            <div class="mid">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/contact">Contact Info</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="pro-con">
+            <h1>Projects</h1>
+            <div class="project">
+                <img src="{% static 'clothes.png' %}" alt="Supplying Clothes">
+                <div class="project-info">
+                    <h2>Supplying Clothes</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et eros ultricies, lobortis velit nec, ultricies libero.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="{% static 'waterdrop.png' %}" alt="Project 2">
+                <div class="project-info">
+                    <h2>Distribution of Water</h2>
+                    <p>Phasellus fermentum auctor ligula, eget viverra mi. Sed at orci non ipsum malesuada vestibulum.</p>
+                </div>
+            </div>
+            <div class="project">
+                <img src="{% static 'blanket.png' %}" alt="Project 2">
+                <div class="project-info">
+                    <h2>Provideing Blankets</h2>
+                    <p>Phasellus fermentum auctor ligula, eget viverra mi. Sed at orci non ipsum malesuada vestibulum.</p>
+                </div>
+            </div>
+
+        <footer class="footer">
+            <div class="center">
+                Copyright &copy; www.StarLight.com All rights reserverd
+            </div>
+        </footer>
+</body>
+</html>

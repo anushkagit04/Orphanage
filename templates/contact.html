@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div id="main-content">
+        <header class="header">
+            <div class="left">
+                <img src="{% static 'or.png'%}" alt="">
+            </div>
+            <div class="mid">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>
+                            <a href="/about">About us</a>
+
+                        </li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/contact">Contact Info</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        {%if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags }} alert-dismissible fade show my-0" role="alert"
+            style="background-color : rgb(22, 192, 223); color:black;width:35%;margin:24px">
+           <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <section id="contact" style="background-color:rgb(45, 65, 65);">
+            <h1 class="h-primary-center" style="color:white;background-color:rgb(45, 65, 65);
+        background-color:rgb(45, 65, 65);">Contact Us</h1>
+            <div id="contact-box" style="background-color:rgb(45, 65, 65);
+        color:white;">
+                <form method="POST" action="/contact">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone: </label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback">Feedback:</label>
+                        <textarea id="feedback" name="feedback" placeholder="Enter your feedback here" required=""
+                            style="width:622px; height:243px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-center" style="font-size: bolder;
+    color: black;
+    cursor: pointer;
+    background-color:rgb(63, 170, 170);
+    border-color: black;">Contact Now!</button>
+                </form>
+            </div>
+        </section>
+        <section id="loc"  style=" margin: 0px 185px;
+        padding: 134px;
+        border-radius: 50px;
+        border-color: black; justify-content:center;
+        align-items:center">
+        <h1>Find Your Way Here <style>#loc h1{background-color: black;
+            color: white;
+            text-align: center;
+            padding: 12px 31px;
+            margin: 33px -99px;}</style></h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.6943328190596!2d79.08046687471801!3d21.164559383101505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0e124ba289d%3A0xa5b6f549445117d4!2sGovernment%20Polytechnic!5e0!3m2!1sen!2sin!4v1719381596336!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <footer class="footer">
+            <div class="center">
+                Copyright &copy; www.StarLight.com All rights reserverd
+            </div>
+        </footer>
+</body>
+
+</html>

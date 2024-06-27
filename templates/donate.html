@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Here</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        #donate {
+            position: relative;
+        }
+        
+        #donate::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+            background-color: rgb(63, 170, 170); /* Background color for the overlay */
+            color: #0b0a0a;
+        }
+        
+        #donate h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2.5rem;
+        }
+        
+        #donate-box {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 65px;
+            background-color: rgb(30, 132, 95);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #donate-box label {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        #donate-box form {
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        #donate-box input,
+        #donate-box textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        #donate-box textarea{
+        width: 606px;
+        height: 104px;
+        }
+        .btnn-center {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 14px auto;
+            padding: 10px;
+            background-color: rgb(42, 69, 86);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: 'Baloo 2', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            float: left;
+        }
+        
+        .btnn-center:hover {
+            font-weight: bold;
+            border: 2px solid white;
+            background-color: rgb(160, 215, 221);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-content">
+        <header class="header">
+            <div class="left">
+                <img src="{% static 'or.png' %}" alt="image">
+            </div>
+            <div class="mid">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li><a href="/contact">Contact Info</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        {%if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags }} alert-dismissible fade show my-0" role="alert"
+            style="background-color : rgb(22, 192, 223); color:black;width:35%;margin:24px">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <section id="donate" style="background-color: white; color:black;">
+            <h1 class="h-primary-center" style="color:black">Donate Here!</h1>
+            <div id="donate-box" style="color:white">
+                <form method="POST" action="/donate">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone: </label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" placeholder="Enter your address here" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="donation">Donation:</label>
+                        <select id="donation" name="donation" required>
+                            <option value="Clothes">Clothes</option>
+                            <option value="Books">Books</option>
+                            <option value="Food">Food</option>
+                            <option value="Blankets">Blankets</option>
+                        </select><br>
+                    </div>
+                    <button type="submit" class="btnn-center">Donate</button>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="center">
+                Copyright &copy; www.StarLight.com All rights reserved
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

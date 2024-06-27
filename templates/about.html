@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+    <div id="main-content">
+        <header class="header">
+            <div class="left">
+                <img src="{% static 'or.png'%}" alt="">
+            </div>
+            <div class="mid">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About us</a><li>
+                            <li><a href="/projects">Projects</a>
+                        </li>
+                        <li><a href="/contact">Contact Info</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="aboutt-container">
+            <h1 class="prime">Our History</h1>
+            <h3>Where we came from..</h3>
+        </div>
+        <div class="a-con">
+            <p>Our organization's history is one of great adventures, overcoming huge odds and most importantly love.
+                Non-profit organizations rarely have a story to tell like ours does; some might find parts of it hard to
+                believe but we assure you, it is all truth.
+
+                The Good Shepherd Agricultural Mission was founded in 1948 by Maxton Davis Strong and his wife, Shirley.
+                Maxton Strong had been a professor of Agricultural Engineering at the Allahabad Agricultural Institute
+                in India. Maxton was a US citizen but became an Indian citizen in 1983 by naturalization. After seeing
+                the need of practical “hands on” agricultural training for aspiring young farmers, he acquired 160 acres
+                of good fertile land along the foothills of the Himalayas, which was being offered to him by the Indian
+                Government. It was there that he would start his social work, educating and uplifting people from rural
+                communities.</p>
+            <p>Having been to the USA and raised funds for some equipment, Maxton, Shirley and their three children,
+                Jack, Maxine, and Jay, returned to India by ship along with their supplies. They landed in Bombay with a
+                John Deere tractor, a four-wheeled trailer, a two-wheeled threshing machine, and some other equipment.
+                They assembled the tractor, which had come in parts, on the Bombay docks and started driving up country.
+                Along with a couple of young Indian men, they moved over five tonnes of equipment, heading for Banbasa,
+                near the border of Nepal. The entire trip by tractor was over 3000km and took several weeks. Shirley and
+                the children traveled by train and met Max at their new home.</p>
+        </div>
+        <div class="boxx">
+            <img src="{% static '1.png' %}" alt="image" class="image-box">
+            <img src="{% static '2.png' %}" alt="image" class="image-box">
+            <img src="{% static '3.png' %}" alt="image" class="image-box">
+        </div>
+        <div class="a-con2">
+            <p>The land was wild and unpopulated, largely because of the deadly effects of malaria. For the first few
+                years, the little family lived in a US army surplus tent. The month of May is very hot (between
+                35-50°C), but the shade of a large mango tree helped keep the Strong family cool. Wild animals of many
+                kinds lived around them and, as the children grew, they learned to respect the animals they encountered
+                and acquired a love for the wild. There were tigers, leopards, many kinds of deadly snakes, monkeys,
+                large iguana lizards, various types of deer, wild pigs and elephants. Hunting was a way of life in those
+                days and there were very few restrictions on what could be shot. Life was hard, the diet limited, and
+                wild meat was appreciated for the table.
+
+                There were a few tribal people called Tharus in the vicinity, who befriended the Strong family and
+                taught them the ways. Later some land was given to the Tharu people and the Mission assisted them in
+                setting up housing and agricultural projects to help them earn a living. Sadly, Maxton and Shirley's
+                oldest son, Jack, died at 11 years old of malarial fever in the early years (1951), and years later
+                their younger son, Jay, also died in a tractor accident at the age of 24 (1971). During that time, they
+                had two more daughters, Carol and Rebecca, who eventually returned to the USA to live.</p>
+        </div>
+        <footer class="footer">
+            <div class="center">
+                Copyright &copy; www.StarLight.com All rights reserverd
+            </div>
+        </footer>
+</body>
+
+</html>
